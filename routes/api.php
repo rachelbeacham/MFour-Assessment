@@ -19,6 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/user', [ApiController::class, 'getAllUsers']);
-Route::post('/user', [ApiController::class, 'createUser']);
-Route::post('/user/{id}', [ApiController::class, 'updateUser']);
+Route::get('/users', [ApiController::class, 'getAllUsers']);
+Route::post('/user', [ApiController::class, 'store']);
+Route::post('/user/{id}', [ApiController::class, 'update']);
