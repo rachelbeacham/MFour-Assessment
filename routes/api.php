@@ -18,3 +18,7 @@ use app\Http\Controllers\ApiController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/users', [ApiController::class, 'getAllUsers']);
+Route::post('/user', [ApiController::class, 'store']);
+Route::post('/user/{id}', [ApiController::class, 'update']);
